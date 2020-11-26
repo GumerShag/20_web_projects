@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">Pick a movie:</span>
+            <select id="select">
+                <option selected="selected" value="10">Film 1</option>
+                <option value="20">Film 2</option>
+                <option value="30">Film 3</option>
+                <option value="40">Film 4</option>
+            </select>
+        </div>
+        <ul class="info">
+            <li>
+            <div class="not-available seat"></div>
+            <small>N/A</small>
+        </li>
+            <li>
+                <div class="selected seat"></div>
+           <small> Selected</small>
+        </li>
+        <li>            
+            <div class="occupied seat"></div>
+            <small>Occupied</small>
+            </li>
+        </ul>
+        <div class="screenWrap">
+            <div class="screen"></div>
+        </div>
+        <div class="seats" id='seats'>
+
+        </div>
+        <p>You have selected <span id="count">0</span> seats for a price of $<span id="price">0</span></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
