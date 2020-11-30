@@ -1,20 +1,28 @@
 let selectedSeats = [];
+countSeats = () => document.querySelectorAll('.seats .selected').length;
+
+const countPrice = (selectedSeatsCount) => {
+    const selectedFilmPrice = document.getElementById('select');
+    const value = +selectedFilmPrice.value;
+    return selectedSeatsCount * value;
+}
 const onSeatsClick = (event) => {
-    const seatId = event.target.id;
-    if (!seatId) return;
-    if (selectedSeats.includes(seatId)) {
-        selectedSeats = selectedSeats.filter(id => id !== seatId);
-        count.innerHTML = selectedSeats.length
-        price.innerHTML = selectedSeats.length * select.value;
-        document.getElementById(seatId).className = 'seat';
+    const seat = event.target;
+    if (event.target.className.indexOf('row') > -1) {
         return;
     }
-    selectedSeats.push(seatId);
-    selectedSeats.forEach(seatId => {
-        document.getElementById(seatId).className = 'seat selected'
-    })
-    count.innerHTML = selectedSeats.length
-    price.innerHTML = selectedSeats.length * select.value;
+    seat.classList.toggle('selected')
+    recalculateInfo();
+
+}
+onSelectChange = (event) => {
+    recalculateInfo();
+}
+const recalculateInfo = () => {
+    const seatsCount = countSeats();
+    const priceCount = countPrice(seatsCount);
+    count.innerHTML = seatsCount;
+    price.innerHTML = priceCount;   
 }
 const randomInteger = (min, max) => {
     let rand = min + Math.random() * (max - min);
@@ -24,6 +32,7 @@ const onContentLoaded = () => {
     const seats = document.getElementById('seats')
     seats.innerHTML = addSeats(6, 9);
     seats.addEventListener('click', onSeatsClick)
+    document.getElementById('select').addEventListener('change', onSelectChange)
 }
 const SEATS_STATUS = ['not-available', 'occupied', ''];
 const addSeats = (rowsCount, rowSeats) => {
