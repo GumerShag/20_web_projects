@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap");
+:root {
+  --light-color: #fffeff;
+  --main-color: #5fa3a5;
+}
+
+* {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+.icon {
+  background-image: url("./assets/exchange.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 40px;
+  transform: scale(2);
+}
+h1 {
+  color: var(--main-color);
+  text-align: center;
+  padding: 12px 8px;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.container {
+  button {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: var(--light-color);
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.container {
+  button:active {
+    transform: scale(1.1);
+  }
+}
+
+.container {
+  input {
+    border: none;
+    background: transparent;
+    text-align: right;
+    appearance: none;
+    font-size: 20px;
+    outline: none;
+  }
+}
+
+.container select {
+  padding: 8px 10px;
+  appearance: none;
+  border-radius: 5px;
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  outline: none;
+}
