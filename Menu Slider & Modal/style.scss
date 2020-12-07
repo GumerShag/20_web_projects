@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap");
+:root {
+  --primary-color: rgb(102, 97, 122);
+  --secondary-color: rgb(43, 136, 165);
+  --modal-duration: 1s;
+}
+
+* {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  transition: transform 0.3s ease-in;
+
+  &.show-nav {
+    transform: translateX(200px);
+  }
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(-100%);
+
+  .logo {
+    padding: 30px 0;
+    text-align: center;
+
+    img {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+      padding: 20px;
+
+      &:first-of-type {
+        border-top: 2px solid rgba(200, 200, 200, 0.1);
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 130%;
+  position: relative;
+  text-align: center;
+  padding: 40px 15px;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 30px 0;
+  }
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &.show-modal {
+    display: block;
+  }
+}
+
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    outline: none;
+  }
+}
+
+.modal-header {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 16px 20px;
+
+  h3 {
+    margin: 0;
+  }
+}
+.modal-content {
+  padding: 20px;
+}
+.modal-form {
+  div {
+    margin: 16px 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .form-input {
+    padding: 8px;
+    width: 100%;
+  }
+}

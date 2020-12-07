@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu|Slider|Modal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user picture"">
+        </div>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <button class="toggle" id="toggle">
+            <i>Menu</i>
+        </button>
+        <h1>My Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fuga mollitia ut cupiditate, iusto consectetur, saepe, beatae esse quis sunt sint perferendis veniam repellendus totam iure possimus ullam doloremque veritatis.</p>
+        <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+    <div class="container">
+        <h2>What is this about</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aut debitis deserunt vel libero commodi est. A deserunt iste nisi officia voluptate beatae aperiam in labore cumque, fuga consequuntur modi.</p>
+        <h2>Benefits</h2>
+        <p>amet consectetur adipisicing elit. Dolor aut debitis deserunt </p>
+        <ul>
+            <li>Lifetime access</li>
+            <li>30 day trial</li>
+        </ul>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nostrum, perferendis incidunt nihil commodi doloremque voluptatum minima optio consequatur cupiditate amet, eaque et fugit pariatur saepe reiciendis ducimus accusamus. Accusantium iure eius, repellat magnam iste earum nobis perferendis, quis molestiae nam accusamus? Dolores odit nihil cupiditate dolorem at perferendis eos dolor ut architecto, ducimus eveniet similique illum officia? Quidem itaque veniam optio laborum quia aut delectus reiciendis natus excepturi dolorum?</p>
+        <div class="modal-container" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="close">
+                    X
+                </button>
+                <div class="modal-header">
+                    <h3>Sign up</h3>
+                </div>
+                <div class="modal-content">
+                    <p>Register to get all offers</p>
+                    <form class="modal-form">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter Name" class="form-input">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter Email" class="form-input">
+                        </div>
+                        <input type="submit" value="Submit" class="submit-btn" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
