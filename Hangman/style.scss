@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap");
+:root {
+  --primary-color: rgb(102, 97, 122);
+  --secondary-color: rgb(43, 136, 165);
+  --modal-duration: 1s;
+}
+
+* {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: rgb(94, 93, 114);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+h1 {
+  margin: 20px 0 0;
+}
+.figure-container {
+  fill: transparent;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+
+  .wrong-letters-container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    p {
+      margin: 0 0 5px;
+    }
+
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+
+  .letter {
+    border-bottom: 3px solid rgb(71, 122, 162);
+    display: inline-flex;
+    font-size: 24px;
+    margin: 0 4px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 20px;
+  }
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  .popup {
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 8px 26px;
+    box-shadow: 0 15px 15px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    button {
+      cursor: pointer;
+      background-color: white;
+      color: cornflowerblue;
+      border: 0;
+      padding: 20px;
+      font-size: 16px;
+      margin-top: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px 20px 0 0;
+  padding: 8px 20px;
+  position: absolute;
+  bottom: -50px;
+  transition: transform 0.3s ease-in-out;
+
+  p {
+    margin: 0;
+  }
+
+  &.show {
+    transform: translateY(-50px);
+  }
+}

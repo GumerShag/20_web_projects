@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman game</h1>
+    <p>Find the hidden word</p>
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="60" y1="20" x2="60" y2="150"/>
+            <line x1="20" y1="150" x2="100" y2="150"/>
+
+            <circle cx="140" cy="60" r="10" class="figure-part"/>
+            <!-- Body -->
+            <line x1="140" y1="70" x2="140" y2="110" class="figure-part"/>
+            <!-- Left hand -->
+            <line x1="140" y1="70" x2="130" y2="90" class="figure-part"/>
+            <!-- Right hand -->
+            <line x1="140" y1="70" x2="150" y2="90" class="figure-part"/>
+            <!-- Left foot -->
+            <line x1="140" y1="110" x2="130" y2="120" class="figure-part"/>
+            <!-- Right foot -->
+            <line x1="140" y1="110" x2="150" y2="120" class="figure-part"/>
+
+        </svg>
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+                <p>Wrong</p>
+                <span>f,s,s</span>
+            </div>
+        </div>
+        <div class="word" id="word">
+            <div class="letter">h</div>
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div>
+        </div>
+    </div>
+    <div class="popup-container" id="pop-container">
+        <div class="popup">
+            <h2 id="final-msg">You Have Won</h2>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+    <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
