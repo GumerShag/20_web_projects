@@ -6,3 +6,4 @@ The repo for Udemy course
 3. ✅ Exchange rate
 4. ❌ Array methods
 5. ✅ Landing with menu and modal
+6. ✅ Hangman game
