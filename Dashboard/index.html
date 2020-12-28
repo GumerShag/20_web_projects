@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">BALLY VALLEY</div>
+        <div class="avatar">
+            <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="">
+            <div class="user">User Name</div>
+            <div class="email">username@gmail.com</div>
+        </div>
+        <ul>
+            <li class="list_item">Dashboard</li>
+            <li class="list_item">Site Details</li>
+            <li class="list_item">Migrations</li>
+            <li class="list_item">Backups</li>
+            <li class="list_item selected">Collaborations</li>
+            <li class="list_item">Support Tickets</li>
+            <li class="list_item">Open New Ticket</li>
+        </ul>
+
+        <div class="quick_actions">
+            <button class="button regular">+Add New Site</button>
+            <button class="button ghost">Request migration</button>
+        </div>
+    </nav>
+    <main>   
+        <header>
+            <div class="back_action">
+                <div class="arrow"><-</div>
+                <h1>Back to Dashboard</h1>
+            </div>
+            <div class="main_action_buttons">
+                <button class="button ghost_blue">Send Feedback & Bug Report</button>
+                <button class="button ghost_blue">Back to Admin</button>
+                <button class="button danger">Logout</button>
+            </div>
+        </header>
+        <div class="container">
+            <div class="table_actions">
+                <div class="table_action">                
+                    <h2>Site Details</h2>
+                    <div class="filters">
+                        <div class="filter_item">
+                            <span>Show</span>
+                            <select id="items_per_page">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+                            <span>Entries</span>
+                        </div>
+                        <div class="filter_item">
+                            <input type="text" placeholder="🔍 Search records">
+                        </div>
+                    </div>
+                 </div>
+                <button class="button regular inverse" style="width: 198px;">+ Add new Site</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td><div class="head_cell">Domain & Plan Name</div></td>
+                        <td><div class="head_cell">Storage</td></div>
+                        <td><div class="head_cell">Monthly Visitor</td></div>
+                        <td><div class="head_cell">Domains</td></div>
+                        <td><div class="head_cell">Status</td></div>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="table_cell">
+                            <div class="domain_url">pappeli.com</div>
+                            <div class="plan_name">Professional plan</div>
+                        </div></td>
+                        <td><div class="table_cell">
+                            <div class="graphics">
+                               <div class="graph"></div> 
+                               <div>35.2 GB of 500 TB</div>
+                            </div>
+                        </td></div>
+                        <td><div class="table_cell">
+                            <div class="graphics">
+                                <div class="graph"></div> 
+                                <div>35.2 GB of 500 TB</div>
+                             </div>
+                        </td></div>
+                        <td><div class="table_cell">
+                            <svg height="60px" width="60px">
+                                <circle cx="50%" cy="50%" r="22px" class="round_diagram"/>
+                            </svg>
+                            25%
+                        </td></div>
+                        <td>
+                            <button class="button">Active</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="table_cell">Paperpillar</div></td>
+                        <td><div class="table_cell">Storage graphiks</td></div>
+                        <td><div class="table_cell">Mountly Visitor graphik graphiks</td></div>
+                        <td><div class="table_cell">Domains persent</td></div>
+                        <td>
+                            <button class="button">Active</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="table_cell">
+                            <div class="domain_url">pappeli.com</div>
+                            <div class="plan_name">Professional plan</div>
+                        </div></td>
+                        <td><div class="table_cell">
+                            <div class="graphics">
+                               <div class="graph"></div> 
+                               <div>35.2 GB of 500 TB</div>
+                            </div>
+                        </td></div>
+                        <td><div class="table_cell">
+                            <div class="graphics">
+                                <div class="graph"></div> 
+                                <div>35.2 GB of 500 TB</div>
+                             </div>
+                        </td></div>
+                        <td><div class="table_cell">
+                            <svg height="60px" width="60px">
+                                <circle cx="50%" cy="50%" r="22px" class="round_diagram"/>
+                            </svg>
+                            25%
+                        </td></div>
+                        <td>
+                            <button class="button">Active</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="table_cell">Paperpillar</div></td>
+                        <td><div class="table_cell">Storage graphiks</td></div>
+                        <td><div class="table_cell">Mountly Visitor graphik graphiks</td></div>
+                        <td><div class="table_cell">Domains persent</td></div>
+                        <td>
+                            <button class="button">Active</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="table_cell">Paperpillar</div></td>
+                        <td><div class="table_cell">Storage graphiks</td></div>
+                        <td><div class="table_cell">Mountly Visitor graphik graphiks</td></div>
+                        <td><div class="table_cell">Domains persent</td></div>
+                        <td>
+                            <button class="button">Active</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
