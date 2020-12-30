@@ -137,6 +137,12 @@ header {
   border-radius: 4px;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
   &.regular {
     background-color: var(--primary-white);
     color: var(--primary-blue);
